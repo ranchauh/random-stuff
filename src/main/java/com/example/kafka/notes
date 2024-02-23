@@ -1,0 +1,50 @@
+https://us05web.zoom.us/j/4808830786?pwd=ZjBweXJqVEhVVlJ6UDN1d1ZoTmZ4Zz09
+
+
+Kafka producer-consumer
+
+
+one kafka topic
+    - 3 number of partitions
+
+1 producer -
+    - producing some string messages to the topic
+    - calculate hash of string to choose partition
+    - producing after some interval
+
+2-3 consumers -
+  - parallel consumption should be supported.
+  first consumer -
+     - waking up at some interval
+     - reading few messages
+     - logging the messages
+  second consumer -
+      - waking up at some interval
+      - reading few messages
+      - logging the messages
+
+class Message
+    - content
+
+class Partition
+    - ArrayList<Message>
+    - recentOffset - lastest message offset
+
+class PartitionConsumer
+    - partition
+    - Consumer
+    - consumerOffset
+
+class - Topic
+    List<partition>
+
+class Producer
+    - topic
+    -
+    sendMessage()
+
+class Consumer
+    - topic
+    - partition
+
+    - receiveMessage()

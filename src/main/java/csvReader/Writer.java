@@ -1,0 +1,7 @@
+package lld2;
+
+import java.util.List;
+
+public interface Writer {
+    void write(List<Record> records);
+}
