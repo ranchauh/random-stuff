@@ -1,5 +1,5 @@
 package bbshop.entities;
 
-public class Barber {
+public class Customer {
 
 }

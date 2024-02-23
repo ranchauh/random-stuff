@@ -1,4 +1,4 @@
-package lld2.configuration;
+package csvReader.configuration;
 
 import org.springframework.context.annotation.Configuration;
 
