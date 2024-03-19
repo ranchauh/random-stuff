@@ -1,0 +1,20 @@
+/opt/kafka_2.13-2.6.0/bin/kafka-console-consumer.sh --from-beginning --topic audplat-delivery-batch-user --bootstrap-server 10.196.128.47:9092
+
+kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group myConsumerGroup --reset-offsets --to-earliest --topic my_topic -execute
+
+https://stackoverflow.com/questions/29791268/how-to-change-start-offset-for-topic
+/opt/kafka_2.13-2.6.0/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group stage-batcher-secor-group --reset-offsets --to-offset 1044231274 --topic audplat-batcher-performance-test --execute
+/opt/kafka_2.13-2.6.0/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 \
+--group stage-batcher-secor-group --topic topic1:0 \
+--reset-offsets --shift-by 47550592 \
+--execute
+
+/opt/kafka_2.13-2.6.0/bin//kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 \
+--topic topic1 --time -1
+
+~/kafka_2.13-3.4.0/bin/kafka-consumer-groups.sh --bootstrap-server kafka:9092 --list
+
+~/kafka_2.13-3.4.0/bin/kafka-topics.sh --create --topic topic1 --replication-factor 1 --partitions 1 --bootstrap-server localhost:9092
+~/kafka_2.13-3.4.0/bin/kafka-topics.sh --create --topic topic1 --replication-factor 1 --partitions 1 --bootstrap-server localhost:9092
+
+~/kafka_2.13-3.4.0/bin/kafka-console-consumer.sh --from-beginning --topic topic1 --bootstrap-server localhost:9092
