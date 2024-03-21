@@ -5,7 +5,6 @@ check cert expiry:
 
 openssl x509 -in "test.crt" -text -noout | grep Validity -A 2
 
-
 echo | openssl s_client -showcerts -servername abcde.com -connect abcde.com:443 2>/dev/null | openssl x509 -inform pem -noout -text
 
 PODNAME="podname"
